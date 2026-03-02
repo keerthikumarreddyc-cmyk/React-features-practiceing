@@ -19,11 +19,11 @@ function App() {
       </div>
       <div className="content">
         {selectedTopic === "components" && (
-          <p>components content here vchjgcsiucsjcvbusdgcbuhsdvcjucbjbc</p>
+          <p>components content here vchjgcsiucsjcvbusdgcbuhsdvcjucbjbcgi</p>
         )}
         {selectedTopic === "content" && <p>content is my passion</p>}
         {selectedTopic === "react" && <p>react is my loaf</p>}
-        {selectedTopic === "review" && <p>giv review</p>}
+        {selectedTopic === "review" && <p>givwghczvhggit review</p>}
       </div>
     </div>
   );
