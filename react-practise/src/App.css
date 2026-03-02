@@ -1,18 +1,36 @@
-.user-container {
+.header {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 20%;
+  margin-bottom: 10px;
 }
 
 .cards {
   display: flex;
-  flex-direction: column;
-  padding: 15px;
-  width: 200px;
-  gap: 40px;
+  gap: 70px;
+  margin-left: 10px;
 }
-.cards img {
-  transition: transform 0.5s ease;
+.container button {
+  font-size: medium;
+  font-family: cursive;
+  cursor: pointer;
+  color: darkslategray;
+  background-color: rgb(191, 221, 160);
+  padding: 8%;
 }
-.cards img:hover {
-  transform: rotate(360deg);
+.content {
+  margin-top: 20px;
+}
+.content p {
+  width: 700px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  background-color: navajowhite;
 }

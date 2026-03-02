@@ -1,23 +1,31 @@
-import User from "./components/user";
+import Card from "./components/card";
 import user1 from "./assets/user1.png";
-import user2 from "./assets/user2.avif";
-import user3 from "./assets/user3.jpg";
-import user4 from "./assets/user4.jpg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState(null);
   return (
-    <header>
-      <div>
-        <h1>Team Member</h1>
-        <div className="user-container">
-          <User img={user1} name="chinnu" role="devloper" status="active" />
-          <User img={user2} name="pinnu" role="automation" status="active" />
-          <User img={user3} name="deepu" role="analayst" status="inactive" />
-          <User img={user4} name="anthnoy" role="analayst" status="inactive" />
-        </div>
+    <div>
+      <header className="header">
+        <img src={user1} alt="logo" className="logo" />
+      </header>
+
+      <div className="cards">
+        <Card onSelect={setSelectedTopic}>components</Card>
+        <Card onSelect={setSelectedTopic}>content</Card>
+        <Card onSelect={setSelectedTopic}>react</Card>
+        <Card onSelect={setSelectedTopic}>review</Card>
       </div>
-    </header>
+      <div className="content">
+        {selectedTopic === "components" && (
+          <p>components content here vchjgcsiucsjcvbusdgcbuhsdvcjucbjbc</p>
+        )}
+        {selectedTopic === "content" && <p>content is my passion</p>}
+        {selectedTopic === "react" && <p>react is my loaf</p>}
+        {selectedTopic === "review" && <p>giv review</p>}
+      </div>
+    </div>
   );
 }
 export default App;
