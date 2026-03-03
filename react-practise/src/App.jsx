@@ -2,11 +2,23 @@ import Card from "./components/card";
 import user1 from "./assets/user1.png";
 import "./App.css";
 import { useState } from "react";
+import icons from "./data.js";
+import IconCard from "./icon.jsx";
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   return (
     <div>
+      <div className="iconss">
+        {icons.map((item) => (
+          <IconCard
+            key={item.title}
+            title={item.title}
+            description={item.description}
+            image={item.image}
+          />
+        ))}
+      </div>
       <header className="header">
         <img src={user1} alt="logo" className="logo" />
       </header>
